@@ -7,8 +7,12 @@ be changed and all files rebuilt at once.
 
 1. [`pipe_render.py`](pipe_render.py) renders the 3D steel pipe: lighting, surface texture, rust, the cut
    edge and the dark inside.
-2. [`build.py`](build.py) sets the colours and the pipe's position for MetalPipeOrg and writes every file
-   in the repository root and in `variants/metalpipeorg/`.
+2. [`steel_emboss.py`](steel_emboss.py) turns a flat shape into a raised, brushed steel part. The Metal
+   Community grin is made with it.
+3. [`build.py`](build.py) sets the colours, shapes and positions for MetalPipeOrg and Metal Community and
+   writes every file in the repository root and in `variants/`.
+
+The images in `history/` are not rebuilt by these scripts. They are kept as they were proposed.
 
 ## Running
 

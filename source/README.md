@@ -10,7 +10,14 @@ be changed and all files rebuilt at once.
 2. [`steel_emboss.py`](steel_emboss.py) turns a flat shape into a raised, brushed steel part. The Metal
    Community grin is made with it.
 3. [`build.py`](build.py) sets the colours, shapes and positions for MetalPipeOrg and Metal Community and
-   writes every file in the repository root and in `variants/`.
+   writes every PNG and ICO file in the repository root and in `variants/`.
+4. [`vector.py`](vector.py) turns the steel into thin strips of gradients, coloured with a copy of the
+   shading in `pipe_render.py`, so the SVG icons match the PNGs.
+5. [`build_vector.py`](build_vector.py) writes the SVG icons in `variants/*/vector/`. Its shapes and
+   positions are copied from `build.py`.
+
+`vector.py` and `build_vector.py` keep their own copies, so a change to the shading in `pipe_render.py`
+or to the icons in `build.py` has to be made in the copy too.
 
 The images in `history/` are not rebuilt by these scripts. They are kept as they were proposed.
 
@@ -22,6 +29,7 @@ From the repository root:
 python3 -m venv .venv
 .venv/bin/pip install -r source/requirements.txt
 .venv/bin/python source/build.py
+.venv/bin/python source/build_vector.py
 ```
 
 The build overwrites the existing files in place. Check the result with `git diff --stat` before

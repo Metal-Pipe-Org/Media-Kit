@@ -28,7 +28,11 @@ Each brand's variants are in its own folder: [`variants/metalpipeorg/`](variants
 3. `transparent/`: the artwork alone on a transparent background, for placing over your own backgrounds.
    For MetalPipeOrg that is the pipe, for Metal Community the face.
 4. `background/` (MetalPipeOrg only): the purple and navy blueprint grid alone, for banners and slides.
-5. `favicon.ico`: a website favicon with 16, 32 and 48 px versions inside.
+5. `vector/`: the root icon as an SVG, for print and other uses larger than 1024 px. Edges, shapes and
+   the grid stay sharp at any size; the steel keeps the texture detail of the 1024 px icon. The steel is
+   made of thousands of thin gradient strips, so the files are large (0.6 MB for MetalPipeOrg, 2.2 MB for
+   Metal Community) and not practical to edit by hand. Use the PNGs wherever a bitmap will do.
+6. `favicon.ico`: a website favicon with 16, 32 and 48 px versions inside.
 
 ## History
 
